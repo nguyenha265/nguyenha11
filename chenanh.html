@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img id="yasuo" src="yasuo.jpg" style="position:absolute;left:600px; top:100px;" height="500" width="300"/>
+<script>
+    function len() {
+        let element = document.getElementById("yasuo");
+        element.style.top = parseInt(element.style.top) - 100 + 'px';
+    }
+    function xuong() {
+        let element = document.getElementById("yasuo");
+        element.style.top = parseInt(element.style.top) + 100 + 'px';
+    }
+    function trai() {
+        let element = document.getElementById("yasuo");
+        element.style.left = parseInt(element.style.left) - 100 + 'px';
+    }
+    function phai() {
+        let element = document.getElementById("yasuo");
+        element.style.left = parseInt(element.style.left) + 100 + 'px';
+    }
+    function thuchiendichuyen(evt) {
+        switch (evt.keyCode) {
+            case 87:
+                len();
+                break;
+            case 83:
+                xuong();
+                break;
+            case 65:
+                trai();
+                break;
+            case 68:
+                phai();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', thuchiendichuyen);
+    }
+</script>
+</body>
+</html>
